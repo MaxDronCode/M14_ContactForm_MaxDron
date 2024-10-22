@@ -4,7 +4,10 @@ let nom = ref('')
 let tel = ref('')
 const emit = defineEmits(['enviarDades'])
 const enviarDades = () => {
-  emit('enviarDades', {nom : nom.value, tel : tel.value})
+  if (nom.value && tel.value){
+
+    emit('enviarDades', {nom : nom.value, tel : tel.value})
+  }
 }
 </script>
 <template>
