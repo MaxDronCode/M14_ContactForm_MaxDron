@@ -5,7 +5,6 @@ let tel = ref('')
 const emit = defineEmits(['enviarDades'])
 const enviarDades = () => {
   if (nom.value && tel.value){
-
     emit('enviarDades', {nom : nom.value, tel : tel.value})
   }
 }
